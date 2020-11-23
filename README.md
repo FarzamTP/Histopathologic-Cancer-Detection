@@ -12,9 +12,14 @@
 * ROC & AUC
 * Submit
 
+## Data understanding
+[!scanned tissues]('./plots/Histopathologic scans of lymph node sections.png')
+
 ## ToDo List:
 
-- [ ] Create README.md file.
+- [x] Create README.md file.
+- [x] Visualize data
+- [ ] Data preparation
 
 ## How to run
 
