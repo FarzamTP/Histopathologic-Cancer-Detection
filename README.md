@@ -13,7 +13,7 @@
 * Submit
 
 ## Data understanding
-[!scanned tissues]('https://github.com/FarzamTP/Histopathologic-Cancer-Detection/blob/main/plots/Histopathologic%20scans%20of%20lymph%20node%20sections.png')
+![scanned tissues]('https://github.com/FarzamTP/Histopathologic-Cancer-Detection/blob/main/plots/Histopathologic%20scans%20of%20lymph%20node%20sections.png')
 
 ## ToDo List:
 
