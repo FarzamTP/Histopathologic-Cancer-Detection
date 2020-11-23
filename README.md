@@ -13,7 +13,7 @@
 * Submit
 
 ## Data understanding
-[!scanned tissues]('./plots/Histopathologic scans of lymph node sections.png')
+![scanned tissues]('./plots/Histopathologic scans of lymph node sections.png')
 
 ## ToDo List:
 
