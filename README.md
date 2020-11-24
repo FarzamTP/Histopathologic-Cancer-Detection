@@ -30,8 +30,10 @@ Model Accuracy            |  Model Loss
 The model doesn't have enough parameters to fit perfectly on the train set, although it is fed with ***200K 16x16*** uncropped images. To enhance the performance, I have increased number of fully connected layers and added `L2` regulation terms to them to prevent the model from overfitting.
 By only adding few more layers, the accuracy rate increased to ***0.8754%*** over train set and ***0.8733%*** over test set.
 
-![Simpel cnn model acc plot](./plots/Simple_CNN_16x16_200K_Tuned/acc.png)
-![Simpel cnn model loss plot](./plots/Simple_CNN_16x16_200K_Tuned/loss.png)
+Model Accuracy (Tuned)            |  Model Loss (Tuned)
+:-------------------------:|:-------------------------:
+![Simpel cnn model acc plot](./plots/Simple_CNN_16x16_200K_Tuned/acc.png)  |  ![Simpel cnn model loss plot](./plots/Simple_CNN_16x16_200K_Tuned/loss.png)
+
 
 The models performance is good. However, it's not good enough.
 
