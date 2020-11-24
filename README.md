@@ -23,13 +23,9 @@ In this dataset, you are provided with a large number of small pathology images 
 It is often a good idea to evaluate a simple model's performance over the given dataset to set boundaries.
 Here I created and fit a simple CNN model with only ***8000*** parameters. the model performance was acceptable with an accuracy rate of ***0.8336%*** on train set and ***0.8307%*** on validation set, after 50 epochs.
 
-<p align="center">
-  <img src="./plots/Simple_CNN_16x16_200K/acc.png" />
-</p>
-
-<p align="center">
-  <img src="./plots/Simple_CNN_16x16_200K/loss.png" />
-</p>
+Model Accuracy            |  Model Loss
+:-------------------------:|:-------------------------:
+![acc](./plots/Simple_CNN_16x16_200K/acc.png)  |  ![loss](./plots/Simple_CNN_16x16_200K/loss.png)
 
 The model doesn't have enough parameters to fit perfectly on the train set, although it is fed with ***200K 16x16*** uncropped images. To enhance the performance, I have increased number of fully connected layers and added `L2` regulation terms to them to prevent the model from overfitting.
 By only adding few more layers, the accuracy rate increased to ***0.8754%*** over train set and ***0.8733%*** over test set.
