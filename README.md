@@ -21,10 +21,13 @@ It is often a good idea to evaluate a simple model's performance over the given 
 Here I created and fit a simple CNN model with only ***8000*** parameters. the model performance was acceptable with an accuracy rate of ***0.8336%*** on train set and ***0.8307%*** on validation set, after 50 epochs.
 ![Simpel cnn model acc plot](./plots/Simple_CNN_16x16_200K/acc.png)
 ![Simpel cnn model loss plot](./plots/Simple_CNN_16x16_200K/loss.png)
+
 The model doesn't have enough parameters to fit perfectly on the train set, although it is fed with ***200K 16x16*** uncropped images. To enhance the performance, I have increased number of fully connected layers and added `L2` regulation terms to them to prevent the model from overfitting.
 By only adding few more layers, the accuracy rate increased to ***0.8754%*** over train set and ***0.8733%*** over test set.
+
 ![Simpel cnn model acc plot](./plots/Simple_CNN_16x16_200K_Tuned/acc.png)
 ![Simpel cnn model loss plot](./plots/Simple_CNN_16x16_200K_Tuned/loss.png)
+
 The models performance is good. However, it's not good enough.
 
 ## ToDo List:
