@@ -20,9 +20,24 @@ In this dataset, you are provided with a large number of small pathology images 
 
 - [x] Create README.md file.
 - [x] Visualize data
-- [ ] Data preparation
+- [x] Data preparation
+- [x] Create a bash file for submitting results to Kaggle
+- [x] Prepare a initial working model
+- [ ] Hyperparameter tuning
+- [ ] Find best Learning rate
+- [ ] Plotting loss and accuracy plots
+- [ ] Tensorboard logs
+
 
 ## How to run
+Using `submit_csv.sh` file you can submit your `submission.csv` file to kaggle.
+*Note:* Please make sure that your `api_key` exists in `~/.kaggle/`. For more information visit [kaggle](https://www.kaggle.com/docs/api).
+
+```bash
+chmod +x submit_csv.sh
+
+./submit_csv.sh `comment`
+```
 
 ## Credits
 
