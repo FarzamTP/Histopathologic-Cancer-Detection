@@ -11,6 +11,7 @@ dataset/*
 logs/*
 matrices/*
 submission.csv
+models/*
 
 # Distribution / packaging
 .Python
