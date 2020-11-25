@@ -21,6 +21,8 @@ In this dataset, you are provided with a large number of small pathology images 
 
 ## First Steps for Learning
 It is often a good idea to evaluate a simple model's performance over the given dataset to set boundaries.
+
+### CNN Model
 Here I created and fit a simple CNN model with only ***8000*** parameters. the model performance was acceptable with an accuracy rate of ***0.8336%*** on train set and ***0.8307%*** on validation set, after 50 epochs.
 
 Model Accuracy            |  Model Loss
@@ -36,6 +38,25 @@ Model Accuracy (Tuned)            |  Model Loss (Tuned)
 
 
 The models performance is good. However, it's not good enough.
+
+## Keras Image Data Generator
+To use [Keras's Image Data Generator]("https://keras.io/api/preprocessing/image/"), it is required to split `train` and `validation` directories, as it is shown below:
+
+[!Keras data generator schema](https://i.stack.imgur.com/H5qCj.jpg)
+
+### Steps
+* Separate and move data according to their label
+* Split data to `train` and `valid` parts
+* Create a CNN model
+* Set values to `Data Generator` hyperparameters
+* Fit the model
+
+After I took these steps, the out coming result was amazing! The accuracy and loss plots demonstrates the differences.
+
+Model Accuracy (Generator Model) |  Model Loss (Generator Model)
+:-------------------------:|:-------------------------:
+![generator model acc plot](./plots/Image_Data_Generator_Model/acc.png)  |  ![generator model loss plot](./plots/Image_Data_Generator_Model/loss.png)
+
 
 ## ToDo List:
 
