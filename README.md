@@ -42,7 +42,7 @@ The models performance is good. However, it's not good enough.
 ## Keras Image Data Generator
 To use [Keras's Image Data Generator]("https://keras.io/api/preprocessing/image/"), it is required to split `train` and `validation` directories, as it is shown below:
 
-[!Keras data generator schema](https://i.stack.imgur.com/H5qCj.jpg)
+![Keras data generator schema](https://i.stack.imgur.com/H5qCj.jpg)
 
 ### Steps
 * Separate and move data according to their label
