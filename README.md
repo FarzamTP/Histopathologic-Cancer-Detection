@@ -57,6 +57,14 @@ Model Accuracy (Generator Model) |  Model Loss (Generator Model)
 :-------------------------:|:-------------------------:
 ![generator model acc plot](./plots/Image_Data_Generator_Model/acc.png)  |  ![generator model loss plot](./plots/Image_Data_Generator_Model/loss.png)
 
+Using KIDG (Keras Image Data Generator), I reached ***0.9467%*** accuracy over train set and ***0.9441%*** over validation set, after ***50*** epochs.
+
+## Crop Images
+According to the [Kaggle Competition Page](https://www.kaggle.com/c/histopathologic-cancer-detection/data), ***A positive label indicates that the center `32x32px` region of a patch contains at least one pixel of tumor tissue.*** Tumor tissue in the outer region of the patch ***does not*** influence the label. So data in outer layers of the images are useless, and can be ignored.
+
+### Steps
+* Crop seperated images
+* Feeding data to Image Data Generator
 
 ## ToDo List:
 
