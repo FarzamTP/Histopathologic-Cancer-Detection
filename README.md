@@ -106,9 +106,10 @@ Densnet Accuracy (Cropped Images - 100 epochs) |  Densnet Loss (Cropped images -
 - [x] Data preparation
 - [x] Create a bash file for submitting results to Kaggle
 - [x] Prepare a initial working model
-- [ ] Hyperparameter tuning
-- [ ] Find best Learning rate
-- [ ] Plotting loss and accuracy plots
+- [x] Hyperparameter tuning
+- [x] Find best Learning rate
+- [x] Plotting loss and accuracy plots
+- [ ] Finding a suitable model
 - [ ] Tensorboard logs
 
 
@@ -121,8 +122,6 @@ chmod +x submit_csv.sh
 
 ./submit_csv.sh `comment`
 ```
-
-## Credits
 
 ## Refrences
 
