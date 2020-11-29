@@ -87,7 +87,8 @@ Model Accuracy (Cropped Images - 100 epochs) |  Model Loss (Cropped images - 100
 According to the above plots, it's obvious that even after ***100** epochs, the model is unable to get fit over the train and validation set. My first assumption was that there is something wrong with the `learning rate` or `optimizer`, but after several attempts it came out that it's not about the hyperparameters.
 After trying `ResNet` models with about ***6 million*** parameters, there was no significant improvement in accuracy rate, and the model was stuck at about ***94%*** accuracy over train set.
 
-Thus, I decided to used more complex models with more learnable parameters. After several tries, `Densenet` models were able to fit over the given data. 
+### Phase II
+I decided to used more complex models with more learnable parameters. After several tries, `Densenet` models were able to fit over the given data. 
 
 Densnet Accuracy (Cropped Images - 100 epochs) |  Densnet Loss (Cropped images - 100 epochs)
 :-------------------------:|:-------------------------:
