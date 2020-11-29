@@ -66,6 +66,33 @@ According to the [Kaggle Competition Page](https://www.kaggle.com/c/histopatholo
   <img src="./plots/Normal_and_cropped_samples.png" />
 </p>
 
+At the above plot, first row indicates the images of normal tissues without tumor with `blue` patch indicating its central `32x32` pixels, and the second row is the cropped section of the images.
+As the same, third includes images with tumors, and the forth row images are cropped sections of them.
+
+To work with `Keras Image Data Generator`, it's necessary to crop and save images to specific directories as shown above. To do so, It can done by using `crop_and_save_images` function witch takes main directory path as input parameter `path`.
+After separating images into directories, it's needed to create the convolutional model.
+
+### Phase I
+At first try, I used the same model which I used to train over normal non-cropped images with ***1.6 million*** parameters. However, the result was not satisfying.
+
+Model Accuracy (Cropped Images - 20 epochs) |  Model Loss (Cropped images - 20 epochs)
+:-------------------------:|:-------------------------:
+![generator model acc plot](./plots/Cropped_Image_Data_Generator_Model/acc.png)  |  ![generator model loss plot](./plots/Cropped_Image_Data_Generator_Model/loss.png)
+
+
+Model Accuracy (Cropped Images - 100 epochs) |  Model Loss (Cropped images - 100 epochs)
+:-------------------------:|:-------------------------:
+![generator model acc plot](./plots/Cropped_Image_Data_Generator_Model_100_epoch/acc.png)  |  ![generator model loss plot](./plots/Cropped_Image_Data_Generator_Model_100_epoch/loss.png)
+
+According to the above plots, it's obvious that even after ***100** epochs, the model is unable to get fit over the train and validation set. My first assumption was that there is something wrong with the `learning rate` or `optimizer`, but after several attempts it came out that it's not about the hyperparameters.
+After trying `ResNet` models with about ***6 million*** parameters, there was no significant improvement in accuracy rate, and the model was stuck at about ***94%*** accuracy over train set.
+
+Thus, I decided to used more complex models with more learnable parameters. After several tries, `Densenet` models were able to fit over the given data. 
+
+Densnet Accuracy (Cropped Images - 100 epochs) |  Densnet Loss (Cropped images - 100 epochs)
+:-------------------------:|:-------------------------:
+![generator model acc plot](./plots/Cropped_Image_Data_Generator_Model_100_epoch/acc.png)  |  ![generator model loss plot](./plots/Cropped_Image_Data_Generator_Model_100_epoch/loss.png)
+
 
 ### Steps
 * Crop seperated images
