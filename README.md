@@ -92,7 +92,7 @@ I decided to used more complex models with more learnable parameters. After seve
 
 Densnet Accuracy (Cropped Images - 100 epochs) |  Densnet Loss (Cropped images - 100 epochs)
 :-------------------------:|:-------------------------:
-![generator model acc plot](./plots/Cropped_Image_Data_Generator_Model_100_epoch/acc.png)  |  ![generator model loss plot](./plots/Cropped_Image_Data_Generator_Model_100_epoch/loss.png)
+![generator model acc plot](./plots/DenseNet169_100_epochs/acc.png)  |  ![generator model loss plot](./plots/DenseNet169_100_epochs/loss.png)
 
 
 ### Steps
