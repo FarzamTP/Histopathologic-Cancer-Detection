@@ -5,11 +5,9 @@
 * Project understanding
 * Data understanding
 * Data visualization
-* Baseline model (Fastai v1)
+* Baseline model (CNN)
 * Validation and analysis
-* Metrics
 * Prediction and activation visualizations
-* ROC & AUC
 * Submit
 
 ## Data understanding provided by [Kaggle](https://www.kaggle.com/c/histopathologic-cancer-detection/data)
