@@ -90,27 +90,25 @@ After trying `ResNet` models with about ***6 million*** parameters, there was no
 ### Phase II
 I decided to used more complex models with more learnable parameters. After several tries, `Densenet` models were able to fit over the given data. 
 
-Densnet Accuracy (Cropped Images - 100 epochs) |  Densnet Loss (Cropped images - 100 epochs)
+
+<p align="center">
+  <img src="https://dl.acm.org/cms/attachment/c6a9b941-6dd1-4f9d-83f4-7c5dc14474b2/tomm1602s-60-f09.jpg" />
+</p>
+
+According to [Pluralsight](https://www.pluralsight.com/guides/introduction-to-densenet-with-tensorflow), DenseNet is one of the new discoveries in neural networks for visual object recognition. DenseNet is quite similar to ResNet with some fundamental differences. ResNet uses an additive method (+) that merges the previous layer (identity) with the future layer, whereas DenseNet concatenates (.)
+
+DenseNet was developed specifically to improve the declined accuracy caused by the vanishing gradient in high-level neural networks. In simpler terms, due to the longer path between the input layer and the output layer, the information vanishes before reaching its destination.
+
+
+Densnet Accuracy (Cropped Images - 150 epochs) |  Densnet Loss (Cropped images - 150 epochs)
 :-------------------------:|:-------------------------:
-![generator model acc plot](./plots/DenseNet169_100_epochs/acc.png)  |  ![generator model loss plot](./plots/DenseNet169_100_epochs/loss.png)
+![generator model acc plot](./plots/DenseNet169_150_epochs/acc.png)  |  ![generator model loss plot](./plots/DenseNet169_150_epochs/loss.png)
 
 
-### Steps
-* Crop seperated images
-* Feeding data to Image Data Generator
+Using above model, with ***12.6 million*** parameters, did fit great on our train and validation set. it achieved ***99.56%*** accuracy over train set and ***92.65%*** over validation set.
 
-## ToDo List:
-
-- [x] Create README.md file.
-- [x] Visualize data
-- [x] Data preparation
-- [x] Create a bash file for submitting results to Kaggle
-- [x] Prepare a initial working model
-- [x] Hyperparameter tuning
-- [x] Find best Learning rate
-- [x] Plotting loss and accuracy plots
-- [ ] Finding a suitable model
-- [ ] Tensorboard logs
+## Conclution
+Our hypathesis which claimed that central sections of the given dataset is more important than the outer parts, is proved using the `DenseNet169` complex model. Although the model suffers from overfitting, it achieves a high score on the test set.
 
 
 ## How to run
@@ -124,4 +122,6 @@ chmod +x submit_csv.sh
 ```
 
 ## Refrences
+
+[Kaggle Histopathologic Cancer Detection Competition](https://www.kaggle.com/c/histopathologic-cancer-detection)
 
